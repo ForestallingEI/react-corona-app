@@ -4,14 +4,14 @@ import Selector from '../components/Selector';
 import Results from '../components/Results';
 import Header from '../components/Header';
 
-export default function TopPage({ setCountry, countriesJson, getCountryData, countryData, loading }) {
+export default function TopPage({ setCountry, countriesJson, countryData, loading }) {
     return (
         <div>
             <div className='top-page-container' >
-                <Header/>
+                <Header />
                 <Title />
-                <Selector setCountry={ setCountry } countriesJson={ countriesJson } getCountryData={ getCountryData } />
-                <Results countryData={ countryData } loading={loading} />
+                <Selector setCountry={ setCountry } countriesJson={ countriesJson } />
+                <Results countryData={ countryData } loading={ loading } />
             </div>
 
         </div>

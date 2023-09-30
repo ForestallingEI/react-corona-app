@@ -2,16 +2,16 @@ import React from 'react';
 import Loading from './Loading';
 
 export default function Results({ countryData, loading }) {
-  const { date,newConfirmed,totalConfirmed,newRecovered,totalRecovered } = countryData
+  const { date, newConfirmed, totalConfirmed, newRecovered, totalRecovered } = countryData;
   return (
     <div className="results-container">
-      {loading?<Loading/>:
-      <div>
-        <p>日付:{ date.slice(0, 10) } </p>
-        <p>新規感染者：{ newConfirmed.toLocaleString() }</p>
-        <p>感染者総数：{ totalConfirmed.toLocaleString() }</p>
-        <p>新規回復者:{ newRecovered.toLocaleString() }</p>
-        <p>回復者総数:{ totalRecovered.toLocaleString() }</p>
+      { loading ? <Loading /> :
+        <div>
+          <p>DATE: <span> { date.slice(0, 10) }</span> </p>
+          <p>NEW CONFIRMED: <span>{ newConfirmed.toLocaleString() }</span></p>
+          <p>TOTAL CONFIRMED: <span>{ totalConfirmed.toLocaleString() }</span></p>
+          <p>NEW RECOVERED: <span>{ newRecovered.toLocaleString() }</span></p>
+          <p>TOTAL RECOVERED: <span>{ totalRecovered.toLocaleString() }</span></p>
         </div>
       }
     </div>
