@@ -1,7 +1,7 @@
-import React from 'react';
+import { ResultsType } from '../types';
 import Loading from './Loading';
 
-export default function Results({ countryData, loading }) {
+export default function Results({ countryData, loading }:ResultsType) {
   const { date, newConfirmed, totalConfirmed, newRecovered, totalRecovered } = countryData;
   return (
     <div className="results-container">

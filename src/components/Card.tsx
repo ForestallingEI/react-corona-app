@@ -1,4 +1,6 @@
-export default function Card({ allCountriesData }) {
+import { CardType } from "../types";
+
+export default function Card({ allCountriesData }:CardType) {
     return (
         <div className="card-container" >
             { allCountriesData.map((singleData, index) =>
